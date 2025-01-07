@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_elements_and_tags</title>
+
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/jpg" href="images/84b2580e52b6b9ac929e69bf1663028b.jpg">
+
+    <style>
+        /* Basic reset to remove default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Beautiful font for the body */
+            background-color: #f4f4f9; /* Light background color */
+            color: #333; /* Dark text color for readability */
+            line-height: 1.6; /* Improve readability by increasing line height */
+            padding: 20px; /* Padding around the content */
+        }
+
+        h1 {
+            text-align: center; /* Center the title */
+            color: #4CAF50; /* Green color for the title */
+            margin-bottom: 20px; /* Space below the title */
+        }
+
+        p {
+            font-size: 1.1em; /* Slightly larger font for the paragraph */
+            color: #555; /* Dark grey color for the text */
+            text-align: center; /* Center the paragraph */
+            margin-bottom: 30px; /* Space below the paragraph */
+        }
+
+        /* Masonry Layout */
+        .media-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+            gap: 20px; /* Space between grid items */
+            justify-content: center; /* Center the content in the grid */
+            margin-top: 30px;
+        }
+
+        .media-container img,
+        .media-container video,
+        .media-container audio,
+        .media-container iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            transition: transform 0.3s ease; /* Smooth scaling effect */
+        }
+
+        .media-container img:hover,
+        .media-container video:hover,
+        .media-container audio:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* YouTube iframe styling */
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Image</h1>
+    <p>This page contains examples of different HTML media elements, such as images, videos, audio, and a YouTube video.</p>
+
+    <div class="media-container">
+        <!-- Image Elements -->
+        <img src="images/84b2580e52b6b9ac929e69bf1663028b.jpg" alt="Image 1">
+        <img src="images/87e0a83fe0d8d6a7eb93bd5bdf0c41ae.jpg" alt="Image 2">
+        <img src="images/a452a6cb4587da51ae8aaf0fc009224f.jpg" alt="Image 3">
+        <img src="images/a85cbdd3bc6cb00798ff7d43de4e5342.jpg" alt="Image 4">
+        <img src="images/flower-9203759.png" alt="Image 5">
+        <img src="images/trees-8482254.jpg" alt="Image 6">
+    </div>
+
+    <h1>Video</h1>
+    <p>This page contains examples of different HTML media elements, such as images, videos, audio, and a YouTube video.</p>
+
+    <div class="media-container">
+        <!-- Video Elements -->
+        <video controls>
+            <source src="videos/204006-923133925.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="videos/241802.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="videos/249475.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="videos/241806.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h1>Audio</h1>
+    <p>This page contains examples of different HTML media elements, such as images, videos, audio, and a YouTube video.</p>
+
+    <div class="media-container">
+        <!-- Audio Elements -->
+        <audio controls>
+            <source src="audio/lost-in-dreams-abstract-chill-downtempo-cinematic-future-beats-270241.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="audio/showreel-music-promo-advertising-opener-vlog-background-intro-theme-261601.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="audio/spinning-head-271171.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="audio/stylish-deep-electronic-262632.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="audio/vlog-music-beat-trailer-showreel-promo-background-intro-theme-274290.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <h1>YouTube Video</h1>
+    <p>This page contains examples of different HTML media elements, such as images, videos, audio, and a YouTube video.</p>
+
+    <div class="media-container">
+        <!-- YouTube Video Embed -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6stlCkUDG_s?si=3NsVx4oZt1Pc5-F7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gsnqXt7d1mU?si=B_jY5dLHUEEJi49B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eg2g6FPsdLI?si=3xxUqziHFxmWGB6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
