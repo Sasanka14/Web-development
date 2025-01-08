@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Content</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        /* Content Styling */
+        #content {
+            color: red;
+        }
+
+        /* List Styling */
+        ul li:nth-child(1) {
+            color: blue;
+        }
+
+        ul li:nth-child(2) {
+            color: green;
+        }
+
+        ul li:nth-child(3) {
+            color: orange;
+        }
+
+        ul li:nth-child(4) {
+            color: purple;
+        }
+
+        /* Heading Styling */
+        #h21 {
+            color: aqua;
+        }
+
+        /* Image Styling */
+        #image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <p id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur eaque nam aperiam eos est optio aut laudantium.
+    </p>
+
+    <ul>
+        <li>Tempore nobis iste itaque natus fugit impedit, voluptatibus.</li>
+        <li>Consectetur hic ad necessitatibus voluptas maiores harum.</li>
+        <li>Impedit, accusamus sint ex nemo rem voluptates ut.</li>
+        <li>Consectetur itaque fugit totam obcaecati facilis! Odit.</li>
+    </ul>
+
+    <img src="images/a85cbdd3bc6cb00798ff7d43de4e5342.jpg" alt="Sample Image" id="image">
+    <h2 id="h21">JavaScript</h2>
+    <p id="studentsName"></p> <!-- Added for displaying student names -->
+    <div id="relationalResults"></div> <!-- Added for relational operator results -->
+    <div id="conditionalResults"></div> <!-- Added for conditional operator results -->
+
+    <script>
+        // Changing content dynamically
+        document.getElementById('content').innerHTML = 'This is a new content.';
+        document.getElementById('image').src = 'images/87e0a83fe0d8d6a7eb93bd5bdf0c41ae.jpg';
+        document.getElementById('h21').style.color = 'red';
+
+        // Working with variables
+        let x = 5;
+        let y = 10;
+        let sum = x + y;
+        console.log(`The sum of ${x} and ${y} is ${sum}`);
+
+        // Alert example
+        alert('This is a JavaScript alert.');
+
+        // Array example
+        const studentsName = ["Sasanka", "Rahul", "Raj", "Rohit"];
+        document.getElementById("studentsName").innerHTML = `First student: ${studentsName[0]}`;
+
+        // Relational Operators example
+        let a = 10;
+        let b = 20;
+        // Relational Operators
+        let isEqual = a == b;        // Equal to
+        let isNotEqual = a != b;    // Not equal to
+        let isGreater = a > b;      // Greater than
+        let isLess = a < b;         // Less than
+        let isGreaterOrEqual = a >= b; // Greater than or equal to
+        let isLessOrEqual = a <= b;    // Less than or equal to
+        // Display results on webpage
+        document.getElementById("relationalResults").innerHTML = `
+            <ul>
+                <li>a == b: ${isEqual}</li>
+                <li>a != b: ${isNotEqual}</li>
+                <li>a > b: ${isGreater}</li>
+                <li>a < b: ${isLess}</li>
+                <li>a >= b: ${isGreaterOrEqual}</li>
+                <li>a <= b: ${isLessOrEqual}</li>
+            </ul>
+        `;
+
+        // Conditional Statements Examples
+        // Types: if, if-else, if-else-if, switch
+
+        let grade = 85;
+
+        // 1. If Statement
+        if (grade > 90) {
+            console.log("Excellent");
+        }
+
+        // 2. If-Else Statement
+        if (grade >= 50) {
+            console.log("Pass");
+        } else {
+            console.log("Fail");
+        }
+
+        // 3. If-Else-If Statement
+        if (grade >= 90) {
+            console.log("Grade: A");
+        } else if (grade >= 75) {
+            console.log("Grade: B");
+        } else if (grade >= 50) {
+            console.log("Grade: C");
+        } else {
+            console.log("Grade: F");
+        }
+
+        // 4. Switch Statement
+        let day = 2; // Example: 1 for Monday, 2 for Tuesday, etc.
+        let dayName;
+        switch (day) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            default:
+                dayName = "Weekend";
+        }
+        console.log(`Today is: ${dayName}`);
+
+        // Display conditional results on the webpage
+        document.getElementById("conditionalResults").innerHTML = `
+            <p>If-Else Example: Grade >= 50 -> ${grade >= 50 ? "Pass" : "Fail"}</p>
+            <p>Switch Example: Today is -> ${dayName}</p>
+        `;
+
+        // Loops examples
+        // Types: For, While, Do-While, For-In, For-Of
+
+        const totalStudents = studentsName.length;
+
+        // 1. For Loop
+        console.log("\n--- For Loop ---");
+        for (let i = 0; i < totalStudents; i++) {
+            console.log(`Student ${i + 1}: ${studentsName[i]}`);
+        }
+
+        // 2. While Loop
+        console.log("\n--- While Loop ---");
+        let i = 0;
+        while (i < totalStudents) {
+            console.log(`While Loop - Student ${i + 1}: ${studentsName[i]}`);
+            i++;
+        }
+
+        // 3. Do...While Loop
+        console.log("\n--- Do...While Loop ---");
+        let j = 0;
+        do {
+            console.log(`Do...While Loop - Student ${j + 1}: ${studentsName[j]}`);
+            j++;
+        } while (j < totalStudents);
+
+        // 4. For-In Loop
+        console.log("\n--- For-In Loop ---");
+        const studentObject = { 0: "Sasanka", 1: "Rahul", 2: "Raj", 3: "Rohit" };
+        for (let key in studentObject) {
+            console.log(`For...In Loop - Key: ${key}, Value: ${studentObject[key]}`);
+        }
+
+        // 5. For-Of Loop
+        console.log("\n--- For-Of Loop ---");
+        for (let name of studentsName) {
+            console.log(`For...Of Loop - Student Name: ${name}`);
+        }
+    </script>
+</body>
+</html>
