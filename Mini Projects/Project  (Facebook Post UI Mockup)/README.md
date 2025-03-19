@@ -1,4 +1,3 @@
-
 # Facebook Post Mockup  
 
 ## Description  
