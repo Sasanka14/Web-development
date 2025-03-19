@@ -1,6 +1,3 @@
-Here’s a `README.md` for your project:  
-
----
 
 # Facebook Post Mockup  
 
@@ -33,7 +30,3 @@ This project is a simple mockup of a Facebook post designed for a desktop interf
 - Enhance styling for better responsiveness.  
 - Implement a real comment section.  
 - Store user interactions using local storage or a database.  
-
----
-
-Let me know if you want any modifications! 🚀
